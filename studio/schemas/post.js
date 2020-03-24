@@ -41,10 +41,10 @@ export default {
       type: 'mainImage'
     },
     {
-      name: 'markalar',
-      title: 'Markalar',
+      name: 'categories',
+      title: 'Categories',
       type: 'array',
-      of: [{ type: 'reference', to: { type: 'marka' } }]
+      of: [{ type: 'reference', to: { type: 'category' } }]
     },
     {
       name: 'body',

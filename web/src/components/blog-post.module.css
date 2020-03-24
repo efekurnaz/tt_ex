@@ -53,7 +53,7 @@
   margin: 1.5rem 0 3rem;
 }
 
-.markalar {
+.categories {
   border-top: 1px solid var(--color-black);
   margin: 2rem 0 3rem;
 
@@ -68,7 +68,7 @@
   }
 }
 
-.markalarHeadline {
+.categoriesHeadline {
   composes: base from './typography.module.css';
   margin: 0.5rem 0 0;
 }

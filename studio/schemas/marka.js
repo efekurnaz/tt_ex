@@ -8,19 +8,13 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Marka Adı',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Açıklama',
+      title: 'Description',
       type: 'text'
-    },
-    {
-      name: 'mainImage',
-      title: 'Logo',
-      type: 'mainImage',
-      description: 'PNG formatında, arkaplanı transparan görüntü kullanın.'
     }
   ],
   liveEdit: true

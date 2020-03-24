@@ -1,26 +1,20 @@
 import { MdApps } from 'react-icons/md'
 
 export default {
-  name: 'marka',
-  title: 'Marka',
+  name: 'category',
+  title: 'Category',
   type: 'document',
   icon: MdApps,
   fields: [
     {
       name: 'title',
-      title: 'Marka Adı',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Açıklama',
+      title: 'Description',
       type: 'text'
-    },
-    {
-      name: 'mainImage',
-      title: 'Logo',
-      type: 'text',
-      description: 'PNG Kullanın.'
     }
   ],
   liveEdit: true

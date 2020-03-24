@@ -9,7 +9,7 @@ import RoleList from './role-list'
 import styles from './blog-post.module.css'
 
 function BlogPost (props) {
-  const { _rawBody, authors, markalar, title, mainImage, publishedAt } = props
+  const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
@@ -39,12 +39,12 @@ function BlogPost (props) {
               </div>
             )}
             {authors && <RoleList items={authors} title='Authors' />}
-            {markalar && (
-              <div className={styles.markalar}>
-                <h3 className={styles.markalarHeadline}>markalar</h3>
+            {categories && (
+              <div className={styles.categories}>
+                <h3 className={styles.categoriesHeadline}>Categories</h3>
                 <ul>
-                  {markalar.map(marka => (
-                    <li key={marka._id}>{marka.title}</li>
+                  {categories.map(category => (
+                    <li key={category._id}>{category.title}</li>
                   ))}
                 </ul>
               </div>
