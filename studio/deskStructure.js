@@ -2,14 +2,14 @@ import S from '@sanity/desk-tool/structure-builder'
 import { MdBusiness, MdSettings } from 'react-icons/md'
 import { FaFile } from 'react-icons/fa'
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'project', 'siteSettings']
+const hiddenTypes = ['sinif', 'companyInfo', 'page', 'person', 'post', 'project', 'siteSettings']
 
 export default () =>
   S.list()
-    .title('Content')
+    .title('İçerik')
     .items([
       S.listItem()
-        .title('Site Settings')
+        .title('Site Ayarları')
         .child(
           S.editor()
             .id('siteSettings')
@@ -17,8 +17,9 @@ export default () =>
             .documentId('siteSettings')
         )
         .icon(MdSettings),
+      
       S.listItem()
-        .title('Company Info')
+        .title('Şirket Bilgileri')
         .child(
           S.editor()
             .id('companyInfo')
@@ -26,7 +27,21 @@ export default () =>
             .documentId('companyInfo')
         )
         .icon(MdBusiness),
+      S.divider(),
       S.listItem()
+        .title('Araçlar')
+        .schemaType('arac')
+        .child(S.documentTypeList('arac').title('Araçlar')),
+      S.listItem()
+        .title('Araç Sınıfları')
+        .schemaType('sinif')
+        .child(S.documentTypeList('sinif').title('Sınıflar')),
+      S.listItem()
+        .title('Markalar')
+        .schemaType('marka')
+        .child(S.documentTypeList('marka').title('Markalar')),
+      S.divider(),
+        S.listItem()
         .title('Projects')
         .schemaType('project')
         .child(S.documentTypeList('project')),
@@ -64,9 +79,5 @@ export default () =>
         .title('People')
         .schemaType('person')
         .child(S.documentTypeList('person').title('People')),
-      S.listItem()
-        .title('Categories')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categories')),
-      ...S.documentTypeListItems().filter(listItem => !hiddenTypes.includes(listItem.getId()))
+      //...S.documentTypeListItems().filter(listItem => !hiddenTypes.includes(listItem.getId()))
     ])

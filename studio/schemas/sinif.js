@@ -1,19 +1,19 @@
 import { MdApps } from 'react-icons/md'
 
 export default {
-  name: 'category',
-  title: 'Category',
+  name: 'sinif',
+  title: 'Araç Sınıfları',
   type: 'document',
   icon: MdApps,
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Sınıf Adı',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Açıklamalar',
       type: 'text'
     }
   ],

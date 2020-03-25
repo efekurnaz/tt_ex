@@ -5,9 +5,10 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
+import arac from './arac'
 import blockContent from './blockContent'
 import blockText from './blockText'
-import category from './category'
+import sinif from './sinif'
 import marka from './marka'
 import companyInfo from './companyInfo'
 import figure from './figure'
@@ -30,9 +31,9 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    arac,
     blockContent,
     blockText,
-    category,
     companyInfo,
     figure,
     mainImage,
@@ -43,6 +44,7 @@ export default createSchema({
     postAuthor,
     project,
     projectMember,
+    sinif,
     siteSettings,
     slideshow
 
