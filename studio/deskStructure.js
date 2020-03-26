@@ -40,6 +40,7 @@ export default () =>
         .title('Markalar')
         .schemaType('marka')
         .child(S.documentTypeList('marka').title('Markalar')),
+        // araçları araç sınıfları içinde sub olark toplamak gerek. Hatta markaları da sublasak?
       S.divider(),
         S.listItem()
         .title('Projects')
